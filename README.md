@@ -20,6 +20,26 @@ The application follows a sequential process orchestrated by a master agent:
 3.  **Article Writing:** The `WriterAgent` uses the research summary to write a compelling, two-page thought-leadership article.
 4.  **Final Output:** The completed article is saved as a Markdown file.
 
+## inkAgent: Multi-Agent Orchestration Flow
+
+The core of `inkAgent`'s intelligence lies in its CrewAI-powered multi-agent system. The `InkAgent` (Master Agent), configured with `allow_delegation=True`, orchestrates the entire process by delegating tasks to specialized agents and managing the flow of information.
+
+```mermaid
+graph TD
+    A[User Input: Topic] --> B(InkAgent: Orchestrates)
+    B --> C{Delegate: Topic Refinement & Link Finding}
+    C --> D[TopicStrategyAgent]
+    D -- Top 3 Research Links --> B
+    B --> E{Delegate: Research & Synthesis}
+    E --> F[ContentResearchAgent]
+    F -- Comprehensive Research Summary --> B
+    B --> G{Delegate: Article Writing}
+    G --> H[WriterAgent]
+    H -- Final Article --> B
+    B --> I[Output: Markdown File]
+```
+
+
 ## The AI Crew
 
 -   **`InkAgent` (Master Agent):** An expert project manager that orchestrates the entire workflow, delegating tasks to the specialist agents.
