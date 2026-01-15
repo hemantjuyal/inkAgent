@@ -1,0 +1,10 @@
+master_task:
+  description: |
+    Orchestrate the full process for creating a thought-leadership article on the topic: '{topic}'.
+    Your plan is as follows:
+    1.  Delegate the task of refining the topic and finding the top 3 research links to the `TopicStrategyAgent`. When delegating, ensure the 'task' and 'context' arguments are provided as simple, plain strings, NOT as dictionaries or JSON objects.
+    2.  Once you receive the links, delegate the task of reading those links and creating a comprehensive research summary to the `ContentResearchAgent`. When delegating, ensure the 'task' and 'context' arguments are provided as simple, plain strings, NOT as dictionaries or JSON objects.
+    3.  Once you have the research summary, delegate the final writing task to the `WriterAgent` to produce the two-page article. When delegating, ensure the 'task' and 'context' arguments are provided as simple, plain strings, NOT as dictionaries or JSON objects.
+    Ensure you pass the necessary information between each step. Your final output must be the completed article from the `WriterAgent`.
+  expected_output: The final, polished, two-page article as a single block of text.
+  agent: ink_agent
