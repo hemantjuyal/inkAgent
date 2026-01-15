@@ -118,7 +118,7 @@ class InkAgentCrew:
 # Run the app
 if __name__ == "__main__":
     crew = InkAgentCrew().crew()
-    topic = input("📝 Enter a topic for the thought-leadership article: ")
+    topic = input("Enter a topic for the thought-leadership article: ")
 
     @traceable(name="Thought-Leadership Article Creation")
     def run_crew(topic):
@@ -128,4 +128,4 @@ if __name__ == "__main__":
     fname = f"{topic.lower().replace(' ', '_')}.md"
     with open(fname, "w") as f:
         f.write(result.raw if hasattr(result, "raw") else result)
-    print(f"✅ Saved article to: {fname}")
+    print(f"Saved article to: {fname}")
