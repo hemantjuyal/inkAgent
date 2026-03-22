@@ -40,8 +40,6 @@ graph TD
 ```
 
 
-## The AI Crew
-
 -   **`InkAgent` (Master Agent):** An expert project manager that orchestrates the entire workflow, delegating tasks to the specialist agents.
 -   **`TopicStrategyAgent`:** A content strategist that refines topics and finds the best online sources.
 -   **`ContentResearchAgent`:** A meticulous researcher who gathers and synthesizes information from web pages.
