@@ -1,4 +1,4 @@
-# inkAgent: Automated Thought-Leadership Article Generation
+# inkAgent
 
 **inkAgent** is an AI-powered application, built with the CrewAI framework, that automates the creation of high-quality, two-page thought-leadership articles. Provide a topic, and inkAgent will handle the research, content synthesis, and writing process from start to finish.
 
@@ -94,18 +94,3 @@ python main.py
 ```
 
 You will be prompted to enter a topic for the article. The application will then execute the workflow and save the final article as a Markdown file in the project's root directory.
-
-## Project Structure
-
-```
-inkAgent/
-├── .env
-├── config/
-│   ├── agents.yaml       # Agent definitions
-│   └── tasks.yaml        # Task definitions
-├── tools/
-│   ├── __init__.py
-│   └── website_search_tool.py # Custom tool for web scraping
-├── main.py               # Main application entry point
-└── requirements.txt      # Python dependencies
-```
